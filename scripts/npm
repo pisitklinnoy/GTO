@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cd app/web/static
+cd webapp/web/static
 npm $1 $2

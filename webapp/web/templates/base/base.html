@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     {% block title %}
-    {{ config.APP_TITLE }}
+    PSU-TGO
     {% endblock %}
   </title>
   <link rel="stylesheet" href="{{ 'css/app.css' | static_url }}">
@@ -18,9 +18,21 @@
 </head>
 
 <body>
-  {% block body %}
-  {% endblock body %}
+  <div class="flex">
+    <!-- Sidebar -->
+    <div class="w-64 bg-base-200 shadow-md h-screen">
+      {% include "base/sidebar.html" %}
+    </div>
 
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col">
+      {% include "base/navbar.html" %}
+      <div class="p-4">
+        {% block body %}
+        {% endblock body %}
+      </div>
+    </div>
+  </div>
   {% block js %}
   {% endblock js %}
 </body>

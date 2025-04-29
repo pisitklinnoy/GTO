@@ -1,3 +1,109 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
 @import "tailwindcss";
 @config "./tailwind.config.js";
 @plugin "daisyui";
+
+@theme {
+  --font-sans: "Noto Sans Thai", "sans-serif";
+}
+
+@plugin "daisyui/theme" {
+  name: "medcancer";
+  default: true;
+  prefersdark: true;
+  color-scheme: "light";
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(98% 0.003 247.858);
+  --color-base-300: oklch(95% 0 0);
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: #00A991;
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondary: #3D89DF;
+  --color-secondary-content: oklch(100% 0 0);
+  --color-accent: oklch(77% 0.152 181.912);
+  --color-accent-content: oklch(38% 0.063 188.416);
+  --color-neutral: oklch(14% 0.005 285.823);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: oklch(74% 0.16 232.661);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(76% 0.177 163.223);
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(100% 0 0);
+  --color-error: #DD524D;
+  --color-error-content: oklch(100% 0 0);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+
+
+@plugin "daisyui/theme" {
+    name: "light";
+    default: true;
+    prefersdark: false;
+    color-scheme: "light";
+  
+    /* สีพื้นหลัง */
+    --color-base-100: #f8fafc; /* สีพื้นหลังหลัก */
+    --color-base-200: #e7ebf0; /* สีพื้นหลังรอง */
+    --color-base-300: #d1d8e0; /* สีพื้นหลังที่เข้มขึ้น */
+    --color-base-content: #1f2937; /* สีข้อความพื้นฐาน */
+  
+    /* สีหลัก */
+    --color-primary: #2563eb; /* สีหลัก (น้ำเงิน) */
+    --color-primary-content: #ffffff; /* สีข้อความของสีหลัก */
+  
+    /* สีรอง */
+    --color-secondary: #64748b; /* สีรอง (เทาเข้ม) */
+    --color-secondary-content: #ffffff; /* สีข้อความของสีรอง */
+  
+    /* สีเน้น */
+    --color-accent: #22c55e; /* สีเน้น (เขียว) */
+    --color-accent-content: #ffffff; /* สีข้อความของสีเน้น */
+  
+    /* สีกลาง */
+    --color-neutral: #374151; /* สีกลาง (เทาเข้ม) */
+    --color-neutral-content: #ffffff; /* สีข้อความของสีกลาง */
+  
+    /* สีข้อมูล */
+    --color-info: #3b82f6; /* สีข้อมูล (น้ำเงินอ่อน) */
+    --color-info-content: #ffffff; /* สีข้อความของสีข้อมูล */
+  
+    /* สีสำเร็จ */
+    --color-success: #10b981; /* สีสำเร็จ (เขียว) */
+    --color-success-content: #ffffff; /* สีข้อความของสีสำเร็จ */
+  
+    /* สีเตือน */
+    --color-warning: #f59e0b; /* สีเตือน (ส้ม) */
+    --color-warning-content: #ffffff; /* สีข้อความของสีเตือน */
+  
+    /* สีข้อผิดพลาด */
+    --color-error: #ef4444; /* สีข้อผิดพลาด (แดง) */
+    --color-error-content: #ffffff; /* สีข้อความของสีข้อผิดพลาด */
+  
+    /* รัศมีและขนาด */
+    --radius-selector: 1rem;
+    --radius-field: 0.5rem;
+    --radius-box: 0.5rem;
+    --size-selector: 0.21875rem;
+    --size-field: 0.21875rem;
+    --border: 1px;
+    --depth: 1;
+    --noise: 0;
+  }
+  
+  
+
+.card-style {
+  @apply border-2 border-base-300 bg-base-100 mt-2;
+}
+
+  

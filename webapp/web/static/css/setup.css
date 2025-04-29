@@ -45,60 +45,63 @@
 
 
 
+
 @plugin "daisyui/theme" {
-    name: "light";
-    default: true;
-    prefersdark: false;
-    color-scheme: "light";
+    /* กำหนดชื่อธีม */
+    name: "light"; /* ชื่อธีมคือ "light" */
+    default: false; /* ไม่ตั้งค่าให้ธีมนี้เป็นค่าเริ่มต้น */
+    prefersdark: false; /* ไม่รองรับโหมดมืด */
+    color-scheme: "light"; /* ใช้โหมดสีแบบ "light" */
   
-    /* สีพื้นหลัง */
-    --color-base-100: #f8fafc; /* สีพื้นหลังหลัก */
-    --color-base-200: #e7ebf0; /* สีพื้นหลังรอง */
-    --color-base-300: #d1d8e0; /* สีพื้นหลังที่เข้มขึ้น */
-    --color-base-content: #1f2937; /* สีข้อความพื้นฐาน */
+    /* สีพื้นฐาน */
+    --color-base-100: oklch(98% 0.002 247.839); /* สีพื้นหลังหลัก */
+    --color-base-200: oklch(96% 0.003 264.542); /* สีพื้นหลังรอง */
+    --color-base-300: oklch(92% 0.006 264.531); /* สีพื้นหลังที่เข้มขึ้น */
+    --color-base-content: oklch(21% 0.034 264.665); /* สีข้อความพื้นฐาน */
   
     /* สีหลัก */
-    --color-primary: #2563eb; /* สีหลัก (น้ำเงิน) */
-    --color-primary-content: #ffffff; /* สีข้อความของสีหลัก */
+    --color-primary: oklch(27% 0.041 260.031); /* สีหลัก */
+    --color-primary-content: oklch(97% 0.021 166.113); /* สีข้อความของสีหลัก */
   
     /* สีรอง */
-    --color-secondary: #64748b; /* สีรอง (เทาเข้ม) */
-    --color-secondary-content: #ffffff; /* สีข้อความของสีรอง */
+    --color-secondary: oklch(39% 0.07 227.392); /* สีรอง */
+    --color-secondary-content: oklch(97% 0.014 308.299); /* สีข้อความของสีรอง */
   
     /* สีเน้น */
-    --color-accent: #22c55e; /* สีเน้น (เขียว) */
-    --color-accent-content: #ffffff; /* สีข้อความของสีเน้น */
+    --color-accent: oklch(29% 0.066 243.157); /* สีเน้น */
+    --color-accent-content: oklch(100% 0 0); /* สีข้อความของสีเน้น */
   
     /* สีกลาง */
-    --color-neutral: #374151; /* สีกลาง (เทาเข้ม) */
-    --color-neutral-content: #ffffff; /* สีข้อความของสีกลาง */
+    --color-neutral: oklch(21% 0.034 264.665); /* สีกลาง */
+    --color-neutral-content: oklch(98% 0.002 247.839); /* สีข้อความของสีกลาง */
   
     /* สีข้อมูล */
-    --color-info: #3b82f6; /* สีข้อมูล (น้ำเงินอ่อน) */
-    --color-info-content: #ffffff; /* สีข้อความของสีข้อมูล */
+    --color-info: oklch(59% 0.145 163.225); /* สีข้อมูล */
+    --color-info-content: oklch(98% 0.019 200.873); /* สีข้อความของสีข้อมูล */
   
     /* สีสำเร็จ */
-    --color-success: #10b981; /* สีสำเร็จ (เขียว) */
-    --color-success-content: #ffffff; /* สีข้อความของสีสำเร็จ */
+    --color-success: oklch(72% 0.219 149.579); /* สีสำเร็จ */
+    --color-success-content: oklch(98% 0.018 155.826); /* สีข้อความของสีสำเร็จ */
   
     /* สีเตือน */
-    --color-warning: #f59e0b; /* สีเตือน (ส้ม) */
-    --color-warning-content: #ffffff; /* สีข้อความของสีเตือน */
+    --color-warning: oklch(79% 0.184 86.047); /* สีเตือน */
+    --color-warning-content: oklch(98% 0.026 102.212); /* สีข้อความของสีเตือน */
   
     /* สีข้อผิดพลาด */
-    --color-error: #ef4444; /* สีข้อผิดพลาด (แดง) */
-    --color-error-content: #ffffff; /* สีข้อความของสีข้อผิดพลาด */
+    --color-error: oklch(63% 0.237 25.331); /* สีข้อผิดพลาด */
+    --color-error-content: oklch(97% 0.013 17.38); /* สีข้อความของสีข้อผิดพลาด */
   
-    /* รัศมีและขนาด */
-    --radius-selector: 1rem;
-    --radius-field: 0.5rem;
-    --radius-box: 0.5rem;
-    --size-selector: 0.21875rem;
-    --size-field: 0.21875rem;
-    --border: 1px;
-    --depth: 1;
-    --noise: 0;
+    /* การตั้งค่ารูปทรงและขนาด */
+    --radius-selector: 1rem; /* รัศมีของตัวเลือก */
+    --radius-field: 0.5rem; /* รัศมีของฟิลด์ */
+    --radius-box: 0.5rem; /* รัศมีของกล่อง */
+    --size-selector: 0.21875rem; /* ขนาดของตัวเลือก */
+    --size-field: 0.21875rem; /* ขนาดของฟิลด์ */
+    --border: 1px; /* ความหนาของเส้นขอบ */
+    --depth: 1; /* ระดับความลึก */
+    --noise: 1; /* ระดับของ noise */
   }
+  
   
   
 

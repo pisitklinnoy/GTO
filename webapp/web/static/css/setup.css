@@ -49,7 +49,7 @@
 @plugin "daisyui/theme" {
     /* กำหนดชื่อธีม */
     name: "light"; /* ชื่อธีมคือ "light" */
-    default: false; /* ไม่ตั้งค่าให้ธีมนี้เป็นค่าเริ่มต้น */
+    default: true; /* ไม่ตั้งค่าให้ธีมนี้เป็นค่าเริ่มต้น */
     prefersdark: false; /* ไม่รองรับโหมดมืด */
     color-scheme: "light"; /* ใช้โหมดสีแบบ "light" */
   

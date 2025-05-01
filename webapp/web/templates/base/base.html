@@ -26,7 +26,10 @@
 
     <!-- Main Content -->
     <div class="flex-1 flex flex-col">
+      <div class="z-1 w-full bg-base-100">
       {% include "base/navbar.html" %}
+      </div>
+      
       <div class="p-2 flex-grow bg-base-200 z-0">
         {% block body %}
         {% endblock body %}

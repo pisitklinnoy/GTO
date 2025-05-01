@@ -1,30 +1,33 @@
 {% extends "/base/default_page.html" %}
-{% import "/components/forms/form_renderer.html" as form_renderer %}
 
 {% block content %}
-<div class="flex flex-col gap-2 w-full justify-center">
-  <div class="card border boder-base-content/5 min-w-96 max-w-md mx-auto">
-    <form method="post">
-      <div class="card-body">
-        {% if error_msg %}
-        <div role="alert" class="alert alert-error mb-3">
-          <span>{{ error_msg }}</span>
-        </div>
-        {% endif %}
-        <h2 class="card-title">
-          Login 
-        </h2>
-        {{ form.csrf_token }}
-        {{ form_renderer.render_text_input(form.username) }}
-        {{ form_renderer.render_text_input(form.password) }}
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">
-            Login ะพัีำรนยร่เรดาน
-          </button>
-        </div>
-      </div>
-    </form>
-  </div>
+<div class="flex flex-col items-center justify-center min-h-screen bg-base-200">
+  <div class="card border border-base-content/10 shadow-lg min-w-96 max-w-md w-full mx-auto">
+    <div class="card-body">
+      <h2 class="card-title text-center text-primary">
+        Login
+      </h2>
+      <p class="text-center text-sm text-base-content mb-4">
+        Please log in using one of the following methods:
+      </p>
+      <div class="flex flex-col gap-4">
+        <!-- Google Login Button -->
+        <a href="/auth/google" class="btn btn-outline btn-primary w-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.35 11.1h-9.4v2.8h5.5c-.3 1.6-1.3 2.9-2.8 3.7v3h4.5c2.6-2.4 4.2-6 4.2-10.5 0-.7-.1-1.4-.2-2z" />
+          </svg>
+          Login with Google
+        </a>
 
+        <!-- PSU Passport Login Button -->
+        <a href="/auth/psu" class="btn btn-outline btn-secondary w-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 100 20 10 10 0 000-20z" />
+          </svg>
+          Login with PSU Passport
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock content %}

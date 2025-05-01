@@ -44,3 +44,9 @@ def register():
         )
 
     return redirect(url_for("users.login"))
+
+@module.route("/profile", methods=["get", "post"])
+def profile():
+    print(1)
+
+    return render_template("/users/profile.html")

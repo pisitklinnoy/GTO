@@ -10,24 +10,24 @@
     {% endblock %}
   </title>
   <link rel="stylesheet" href="{{ 'css/app.css' | static_url }}">
-  <script src="{{ 'node_modules/htmx.org/dist/htmx.min.js' | static_url }}"></script>
-  <script src="{{ 'node_modules/cally/dist/cally.js' | static_url }}"></script>
-  <script src="{{ 'js/date-picker.js' | static_url }}"></script>
   {% block head %}
   {% endblock head %}
 </head>
 
 <body>
   <div class="flex">
+    <!-- Sidebar Toggle -->
+    <input id="sidebar-toggle" type="checkbox" class="hidden peer" />
+
     <!-- Sidebar -->
-    <div class="w-64 bg-base-200 shadow-md h-screen z-10">
+    <div id="sidebar" class="w-64 bg-base-200 shadow-md h-screen z-10 peer-checked:hidden">
       {% include "base/sidebar.html" %}
     </div>
 
     <!-- Main Content -->
     <div class="flex-1 flex flex-col">
       <div class="z-1 w-full bg-base-100">
-      {% include "base/navbar.html" %}
+        {% include "base/navbar.html" %}
       </div>
       
       <div class="p-2 flex-grow bg-base-200 z-0">

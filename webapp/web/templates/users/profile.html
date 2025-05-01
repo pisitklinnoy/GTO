@@ -3,9 +3,9 @@
 
 {% block content %}
 <div class="min-h-screen bg-base-200 p-0">
-  <div class="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 h-full">
-    <!-- Profile Overview Section -->
-    <div class="card bg-base-100 shadow-md p-6 flex flex-col items-center h-full">
+  <div class="max-w-full mx-auto grid grid-cols-3 gap-10 h-full">
+    <!-- Column 0: Profile Overview Section -->
+    <div class="col-span-1 card bg-base-100 shadow-md p-6 flex flex-col items-center h-76">
       <div class="avatar mb-4">
         <div class="w-32 h-32 rounded-full bg-primary text-primary-content flex items-center justify-center">
           <img src="/path/to/profile-picture.jpg" alt="Profile Picture" class="w-full h-full object-cover rounded-full">
@@ -16,33 +16,50 @@
       <button class="btn btn-outline btn-primary mt-4">Change Photo</button>
     </div>
 
-    <!-- Profile Details Section -->
-    <div class="card bg-base-100 shadow-md p-6 h-full">
+    <!-- Column 1: Profile Details Section -->
+    <div class="col-span-2 card bg-base-100 shadow-md p-6 h-full">
       <h2 class="text-lg font-bold text-base-content mb-4">Profile Overview</h2>
       <div class="space-y-4">
+        <!-- Full Name -->
         <div class="flex items-center gap-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" />
           </svg>
           <span class="text-base-content">Full Name: <strong>John Doe</strong></span>
         </div>
+        <!-- Email -->
         <div class="flex items-center gap-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m0 0l4-4m-4 4l4 4" />
           </svg>
           <span class="text-base-content">Email: <strong>john.doe@gmail.com</strong></span>
         </div>
+        <!-- Department -->
         <div class="flex items-center gap-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
           </svg>
           <span class="text-base-content">Department: <strong>IT Department</strong></span>
         </div>
+        <!-- Role -->
         <div class="flex items-center gap-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 100 20 10 10 0 000-20z" />
           </svg>
           <span class="text-base-content">Role: <strong>admin</strong></span>
+        </div>
+        <!-- Member Since -->
+        <div class="flex items-center gap-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h8m-4 0v8m0 0H8m4 0h4" />
+          </svg>
+          <span class="text-base-content">Member Since: <strong>January 15, 2024</strong></span>
+        </div>
+        <div class="flex items-center gap-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h8m-4 0v8m0 0H8m4 0h4" />
+          </svg>
+          <span class="text-base-content">Member Since: <strong>January 15, 2024</strong></span>
         </div>
         <div class="flex items-center gap-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -54,36 +71,30 @@
       <button class="btn btn-primary mt-4">Edit Profile</button>
     </div>
 
-    <!-- Account Settings Section -->
-    <div class="col-span-2 grid grid-cols-2 gap-10 h-full">
-      <!-- Empty Column -->
-      <div class="h-full"></div>
-
-      <!-- Settings Column -->
-      <div class="card bg-base-100 shadow-md p-6 h-full">
-        <h2 class="text-lg font-bold text-base-content mb-4">Account Settings</h2>
-        <div class="space-y-4">
-          <div class="flex justify-between items-center">
-            <div>
-              <h3 class="text-base font-bold text-base-content">Email Notifications</h3>
-              <p class="text-sm text-base-content/70">Manage your email notification preferences</p>
-            </div>
-            <button class="btn btn-outline btn-primary">Configure</button>
+    <!-- Row 2: Account Settings Section -->
+    <div class="col-span-2 col-start-2 card bg-base-100 shadow-md p-6 h-full">
+      <h2 class="text-lg font-bold text-base-content mb-4">Account Settings</h2>
+      <div class="space-y-4">
+        <div class="flex justify-between items-center">
+          <div>
+            <h3 class="text-base font-bold text-base-content">Email Notifications</h3>
+            <p class="text-sm text-base-content/70">Manage your email notification preferences</p>
           </div>
-          <div class="flex justify-between items-center">
-            <div>
-              <h3 class="text-base font-bold text-base-content">Change Password</h3>
-              <p class="text-sm text-base-content/70">Update your password regularly to keep your account secure</p>
-            </div>
-            <button class="btn btn-outline btn-primary">Update</button>
+          <button class="btn btn-outline btn-primary">Configure</button>
+        </div>
+        <div class="flex justify-between items-center">
+          <div>
+            <h3 class="text-base font-bold text-base-content">Change Password</h3>
+            <p class="text-sm text-base-content/70">Update your password regularly to keep your account secure</p>
           </div>
-          <div class="flex justify-between items-center">
-            <div>
-              <h3 class="text-base font-bold text-base-content">Sign Out</h3>
-              <p class="text-sm text-base-content/70">Sign out your profile</p>
-            </div>
-            <button class="btn btn-outline btn-error">Sign Out</button>
+          <button class="btn btn-outline btn-primary">Update</button>
+        </div>
+        <div class="flex justify-between items-center">
+          <div>
+            <h3 class="text-base font-bold text-base-content">Sign Out</h3>
+            <p class="text-sm text-base-content/70">Sign out your profile</p>
           </div>
+          <button class="btn btn-outline btn-error">Sign Out</button>
         </div>
       </div>
     </div>

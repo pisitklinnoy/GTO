@@ -5,70 +5,62 @@
 <div class="min-h-screen bg-base-200 p-0">
   <div class="max-w-full mx-auto grid grid-cols-3 gap-10 h-full">
     <!-- Column 0: Profile Overview Section -->
-    <div class="col-span-1 card bg-base-100 shadow-md p-6 flex flex-col items-center h-76">
-      <div class="avatar mb-4">
-        <div class="w-32 h-32 rounded-full bg-primary text-primary-content flex items-center justify-center">
-          <img src="/path/to/profile-picture.jpg" alt="Profile Picture" class="w-full h-full object-cover rounded-full">
-        </div>
+    <div class="col-span-1 card bg-base-100 shadow-md p-6 flex flex-col items-center h-86">
+      <h2 class="text-lg font-bold text-base-content mb-4">Profile Overview</h2>
+      <div class="w-32 h-32 rounded-full bg-primary text-primary-content flex items-center justify-center mb-4">
+        <i class="fas fa-user text-white" style="font-size: 3rem;"></i>
       </div>
-      <h2 class="text-lg font-bold text-base-content">John Doe</h2>
+      <h2 class="text-lg font-bold text-base-content mt-2">John Doe</h2>
       <p class="text-sm text-base-content/70">admin</p>
-      <button class="btn btn-outline btn-primary mt-4">Change Photo</button>
+      <button class="btn btn-outline btn-primary mt-4 w-full">Change Photo</button>
     </div>
 
     <!-- Column 1: Profile Details Section -->
-    <div class="col-span-2 card bg-base-100 shadow-md p-6 h-full">
-      <h2 class="text-lg font-bold text-base-content mb-4">Profile Overview</h2>
-      <div class="space-y-4">
+    <div class="col-span-2 card bg-base-100 shadow-md p-6 h-full ">
+      <h2 class="text-lg font-bold text-base-content mb-4">Personal Information</h2>
+      <div class="space-y-6">
         <!-- Full Name -->
-        <div class="flex items-center gap-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" />
-          </svg>
-          <span class="text-base-content">Full Name: <strong>John Doe</strong></span>
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-user text-primary text-xl"></i>
+          <div>
+            <h3 class="text-sm font-bold text-base-content">Full Name</h3>
+            <p class="text-base text-base-content">John Doe</p>
+          </div>
         </div>
         <!-- Email -->
-        <div class="flex items-center gap-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m0 0l4-4m-4 4l4 4" />
-          </svg>
-          <span class="text-base-content">Email: <strong>john.doe@gmail.com</strong></span>
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-envelope text-primary text-xl"></i>
+          <div>
+            <h3 class="text-sm font-bold text-base-content">Email</h3>
+            <p class="text-base text-base-content">john.doe@gmail.com</p>
+          </div>
         </div>
         <!-- Department -->
-        <div class="flex items-center gap-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-          <span class="text-base-content">Department: <strong>IT Department</strong></span>
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-building text-primary text-xl"></i>
+          <div>
+            <h3 class="text-sm font-bold text-base-content">Department</h3>
+            <p class="text-base text-base-content">IT Department</p>
+          </div>
         </div>
         <!-- Role -->
-        <div class="flex items-center gap-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 100 20 10 10 0 000-20z" />
-          </svg>
-          <span class="text-base-content">Role: <strong>admin</strong></span>
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-tools text-primary text-xl"></i>
+          <div>
+            <h3 class="text-sm font-bold text-base-content">Role</h3>
+            <p class="text-base text-base-content">admin</p>
+          </div>
         </div>
         <!-- Member Since -->
-        <div class="flex items-center gap-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h8m-4 0v8m0 0H8m4 0h4" />
-          </svg>
-          <span class="text-base-content">Member Since: <strong>January 15, 2024</strong></span>
-        </div>
-        <div class="flex items-center gap-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h8m-4 0v8m0 0H8m4 0h4" />
-          </svg>
-          <span class="text-base-content">Member Since: <strong>January 15, 2024</strong></span>
-        </div>
-        <div class="flex items-center gap-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h8m-4 0v8m0 0H8m4 0h4" />
-          </svg>
-          <span class="text-base-content">Member Since: <strong>January 15, 2024</strong></span>
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-calendar-alt text-primary text-xl"></i>
+          <div>
+            <h3 class="text-sm font-bold text-base-content">Member Since</h3>
+            <p class="text-base text-base-content">January 15, 2024</p>
+          </div>
         </div>
       </div>
-      <button class="btn btn-primary mt-4">Edit Profile</button>
+      <button class="btn btn-primary mt-4 w-32">Edit Profile</button>
     </div>
 
     <!-- Row 2: Account Settings Section -->

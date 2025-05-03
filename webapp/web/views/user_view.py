@@ -47,6 +47,12 @@ def register():
 
 @module.route("/profile", methods=["get", "post"])
 def profile():
-    print(1)
-
     return render_template("/users/profile.html")
+
+@module.route("/load-edit-profile")
+def load_edit_profile():
+    return render_template("users_form/form_edit_user.html")
+
+@module.route("/load-test")
+def load_test():
+    return render_template("users_form/test.html")

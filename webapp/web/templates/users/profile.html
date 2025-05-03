@@ -45,7 +45,7 @@
         </div>
         <!-- Role -->
         <div class="flex items-center space-x-4">
-          <i class="fas fa-tools text-primary text-xl"></i>
+          <i class="fas fa-shield-alt text-primary text-xl"></i>
           <div>
             <h3 class="text-sm font-bold text-base-content">Role</h3>
             <p class="text-base text-base-content">admin</p>
@@ -60,7 +60,13 @@
           </div>
         </div>
       </div>
-      <button class="btn btn-primary mt-4 w-32">Edit Profile</button>
+      <button class="btn btn-primary mt-4 w-32" 
+        hx-get="/users/load-edit-profile" 
+        hx-target="#modal-content" 
+        hx-swap="innerHTML" 
+        hx-on="htmx:afterRequest: document.getElementById('modal').classList.add('modal-open')">
+          Edit Profile
+      </button>
     </div>
 
     <!-- Row 2: Account Settings Section -->
@@ -92,4 +98,6 @@
     </div>
   </div>
 </div>
+
+
 {% endblock content %}

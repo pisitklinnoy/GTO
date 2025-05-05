@@ -45,14 +45,22 @@ def register():
 
     return redirect(url_for("users.login"))
 
+
 @module.route("/profile", methods=["get", "post"])
 def profile():
     return render_template("/users/profile.html")
+
 
 @module.route("/load-edit-profile")
 def load_edit_profile():
     return render_template("users_form/form_edit_user.html")
 
+
 @module.route("/load-test")
 def load_test():
     return render_template("users_form/test.html")
+
+
+@module.route("/users-management", methods=["get", "post"])
+def users_management():
+    return render_template("users/users-management.html")

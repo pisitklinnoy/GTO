@@ -60,7 +60,7 @@
     --color-base-content: oklch(21% 0.034 264.665); /* สีข้อความพื้นฐาน */
   
     /* สีหลัก */
-    --color-primary: oklch(27% 0.041 260.031); /* สีหลัก */
+    --color-primary: #003366; /* สีหลัก */
     --color-primary-content: oklch(97% 0.021 166.113); /* สีข้อความของสีหลัก */
   
     /* สีรอง */
@@ -134,4 +134,7 @@
   width: 90%;
   max-width: 500px;
 }
-  
+.text-sm {
+  @apply text-sm;
+  color: #6B7280;
+}
